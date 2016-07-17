@@ -66,9 +66,15 @@
                               'Error: Your browser doesn\'t support geolocation.');
       }
       function mailIt() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var maillat = position.coords.latitude;
+            var maillng = position.coords.longitude;
+          });
+        } else {
+        }
+      }
         var comm=document.forms[0].elements;
-        var maillat = 1;
-        var maillng = 2;
         console.log(maillat);
         console.log(maillng);
         var q='Lat: '+maillat+' Long: '+maillng+' Description: '+comm.comment.value;
