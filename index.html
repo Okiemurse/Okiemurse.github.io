@@ -40,11 +40,6 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            var maillat = position.coords.latitude;
-            var maillng = position.coords.longitude;
-            console.log(maillat);
-            console.log(maillng);
-            console.log(pos);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
@@ -63,8 +58,12 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
-      function mailIt(maillat, maillng) {
+      function mailIt() {
         var elms=document.forms[0].elements;
+        var maillat = position.coords.latitude;
+        var maillng = position.coords.longitude;
+        console.log(maillat);
+        console.log(maillng);
         var q='Lat: '+maillat+'&#37;0ALong: '+maillng+'&#37;0ADescription: '+elms.comment.value;
         document.forms[0].action='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=' + q;
         document.forms[0].submit();
