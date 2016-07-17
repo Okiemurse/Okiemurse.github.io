@@ -47,7 +47,6 @@
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
-            <a class="email" title="Email a friend" href="#" onclick="javascript:window.location='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=Description: %0A Pos: ' + pos + window.location;return false">Email</a>;
           });
         } else {
           // Browser doesn't support Geolocation
@@ -62,7 +61,7 @@
                               'Error: Your browser doesn\'t support geolocation.');
       }
     </script>
-  
+  <a class="email" title="Email a friend" href="#" onclick="javascript:window.location='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=Description: %0A Pos: ' + pos + window.location;return false">Email</a>;
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0H0kLo4BpkvQmU1XSqqxn56gUKJvM_y8&callback=initMap">
     </script>
