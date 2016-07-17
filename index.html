@@ -25,7 +25,6 @@
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
-
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
@@ -59,12 +58,12 @@
                               'Error: Your browser doesn\'t support geolocation.');
       }
       function mailIt() {
-        var elms=document.forms[0].elements;
-        var maillat = position.coords.latitude;
-        var maillng = position.coords.longitude;
+        var comm=document.forms[0].elements;
+        var maillat = 1;
+        var maillng = 2;
         console.log(maillat);
         console.log(maillng);
-        var q='Lat: '+maillat+'&#37;0ALong: '+maillng+'&#37;0ADescription: '+elms.comment.value;
+        var q='Lat: '+maillat+'&#37;0ALong: '+maillng+'&#37;0ADescription: '+comm.comment.value;
         document.forms[0].action='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=' + q;
         document.forms[0].submit();
       }
