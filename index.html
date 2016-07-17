@@ -63,9 +63,9 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
-      function mailIt(pos) {
+      function mailIt(maillat, maillng) {
         var elms=document.forms[0].elements;
-        var q='Location: '+pos+'&#37;0ADescription: '+elms.comment.value;
+        var q='Lat: '+maillat+'&#37;0ALong: '+maillng+'&#37;0ADescription: '+elms.comment.value;
         document.forms[0].action='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=' + q;
         document.forms[0].submit();
       }
