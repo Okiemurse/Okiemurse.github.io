@@ -62,15 +62,15 @@
           navigator.geolocation.getCurrentPosition(function(position) {
             var maillat = position.coords.latitude;
             var maillng = position.coords.longitude;
+            var comm=document.forms[0].elements;
+            console.log(maillat);
+            console.log(maillng);
+            var q='Lat: '+maillat+' Long: '+maillng+' Description: '+comm.comment.value;
+            document.forms[0].action='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=' + q;
+            document.forms[0].submit();
           });
         } else {
-        }
-        var comm=document.forms[0].elements;
-        console.log(maillat);
-        console.log(maillng);
-        var q='Lat: '+maillat+' Long: '+maillng+' Description: '+comm.comment.value;
-        document.forms[0].action='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=' + q;
-        document.forms[0].submit();
+          }
       }
     </script>
     <script async defer
