@@ -61,8 +61,8 @@
       }
       function mailIt() {
         var elms=document.forms[0].elements;
-        var q='Dear '+elms.name.value+'&#37;0AYour '+elms.comment.value+' in bla bla ...';
-        document.forms[0].action='mailto:name@domain.com?cc='+elms.email.value+'&subject=Feedback form&body=' + q;
+        var q='Location: '+pos+'&#37;0ADescription: '+elms.comment.value;
+        document.forms[0].action='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=' + q;
         document.forms[0].submit();
       }
     </script>
@@ -71,10 +71,8 @@
     </script>
     <form action="#" method="post" onsubmit="mailIt(); return false;" enctype="text/plain">
 <div>
-    <label>Your name: <input type="text" name="name"></label>
-    <label>Your email: <input type="text" name="email"></label>
-    <label>Your comment: <textarea name="comment"></textarea></label>
-    <button type="submit">submit</button>
+    <label>Description: <textarea name="comment"></textarea></label>
+    <button type="submit">Email Map Point</button>
 </div>
 </form>
 <p id="demo2">IOS Users: Make sure that your Location Services on the device are on for Safari. Go to Settings > General > Location Services > Safari and make sure it is set to ON.</p>
