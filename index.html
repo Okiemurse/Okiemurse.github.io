@@ -39,6 +39,10 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            var x = position.coords.latitude;
+            var y = position.coords.longitude;
+            console.log(x);
+            console.log(y);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
