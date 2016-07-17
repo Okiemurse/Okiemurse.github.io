@@ -41,7 +41,7 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-
+            console.log(pos);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
@@ -61,7 +61,7 @@
                               'Error: Your browser doesn\'t support geolocation.');
       }
     </script>
-  <a class="email" title="Email a friend" href="#" onclick="javascript:window.location='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=Description: %0A Pos: ' + pos + window.location;return false">Email</a>;
+  // <a class="email" title="Email a friend" href="#" onclick="javascript:window.location='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=Description: %0A Pos: ' + pos + window.location;return false">Email</a>;
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0H0kLo4BpkvQmU1XSqqxn56gUKJvM_y8&callback=initMap">
     </script>
