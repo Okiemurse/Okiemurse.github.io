@@ -65,7 +65,7 @@
             var comm=document.forms[0].elements;
             console.log(maillat);
             console.log(maillng);
-            var q='Lat: '+maillat+' Long: '+maillng+' Description: '+comm.comment.value;
+            var q=' Lat: '+maillat+'%0D%0A Long: '+maillng+'%0D%0A Description: '+comm.comment.value;
             document.forms[0].action='mailto:cmatzkanin@gmail.com?subject=PoGoData&body=' + q;
             document.forms[0].submit();
           });
