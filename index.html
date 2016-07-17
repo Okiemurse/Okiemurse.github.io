@@ -40,6 +40,10 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            var maillat = position.coords.latitude;
+            var maillng = position.coords.longitude;
+            console.log(maillat);
+            console.log(maillng);
             console.log(pos);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
